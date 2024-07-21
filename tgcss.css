@@ -85,12 +85,12 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    background-color: #000000; /* Configura o fundo do menu de baixo */
-    padding: 0.8em;
-    border: 3px solid #ffffff; /* Adiciona uma borda de 1px sólida com a cor #ddd */
-    border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: #000000; /* Configura o fundo do menu de baixo */
+  padding: 0.8em;
+  border: 3px solid #ffffff; /* Adiciona uma borda de 1px sólida com a cor #ddd */
+  border-radius: 10px;
 }
 
 nav a {
