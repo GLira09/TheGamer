@@ -1,0 +1,8 @@
+.class-Ultraboost{
+    border-radius: 8px; /* Faz borda e arredonda imagens */   
+    width: 450px; /* Defina o tamanho desejado para a imagem */
+    float: left; /* Faça a imagem flutuar para a esquerda */
+    margin-right: 20px; /* Adicione margem à direita para separar a imagem do texto */
+    
+}
+
