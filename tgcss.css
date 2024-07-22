@@ -126,7 +126,7 @@ nav a:hover {
     display: inline-block;
     padding: 10px 15px;
     background-color: #050505; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
+    color: #ffffff; /* Cor do texto */
     text-decoration: none; /* Remove sublinhado padrão */
     border-radius: 5px; /* Borda arredondada */
     transition: background-color 0.3s; /* Transição suave de cor de fundo */
