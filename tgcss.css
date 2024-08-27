@@ -6,6 +6,7 @@ body {
     background-color:#151c35; /* Configura o fundo */
 }
 
+
 .imagem-sobre-menu {
   width: 100%; /* Garante que a largura da imagem seja 100% do contêiner pai */
   max-width: 280px; /* Define a largura máxima da imagem para evitar distorções */
