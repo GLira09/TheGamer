@@ -1,255 +1,254 @@
 body {
-    font-family: "Russo One", sans-serif;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    background-color:#151c35; /* Configura o fundo */
+  font-family: "Russo One", sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  background-color:#151c35; /* Configura o fundo */
 }
 
-
 .imagem-sobre-menu {
-  width: 100%; /* Garante que a largura da imagem seja 100% do contêiner pai */
-  max-width: 280px; /* Define a largura máxima da imagem para evitar distorções */
-  margin: 0 10px 20px 0; /* Adiciona margem à direita e inferior para separar as imagens */
+width: 100%; /* Garante que a largura da imagem seja 100% do contêiner pai */
+max-width: 280px; /* Define a largura máxima da imagem para evitar distorções */
+margin: 0 10px 20px 0; /* Adiciona margem à direita e inferior para separar as imagens */
 }
 
 /* Adicione estilos para alinhar as imagens em linha */
 .linha-de-imagens {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
 }
 
 .menu-flutuante {
-  float: left;
+float: left;
 }
 
 .test {
-  text-align: center;
+text-align: center;
 }
 
 svg {
-	font-family: "Russo One", sans-serif;
-	width: 100%; height: 100%;
+font-family: "Russo One", sans-serif;
+width: 100%; height: 100%;
 }
 
 svg text {
-  animation: stroke 5s infinite alternate; /* Correção na definição da animação */
-  stroke-width: 2;
-  stroke: #FFFFFF;
-  font-size: 100px;
+animation: stroke 5s infinite alternate; /* Correção na definição da animação */
+stroke-width: 2;
+stroke: #FFFFFF;
+font-size: 100px;
 }
 
 img{
-    border-radius: 8px; /* Faz borda e arredonda imagens */
-}
-
-.imagem-sobre-menu{
   border-radius: 8px; /* Faz borda e arredonda imagens */
 }
 
-.tg-icon {
-    height: 130px; /* Define a altura do corpo para ocupar toda a altura da tela */
-    float: center;/*centraliza a logo no centro*/
-    margin: auto; /*centraliza a logo no centro*/
-    display: flex;/*centraliza a logo no centro*/
-    align-items: flex-start; /* Alinha os itens no topo */
-    
+.imagem-sobre-menu{
+border-radius: 8px; /* Faz borda e arredonda imagens */
 }
 
-.ft-perfil2{
-  height: 40px; /* Define a altura do corpo para ocupar toda a altura da tela */
+.tg-icon {
+  height: 130px; /* Define a altura do corpo para ocupar toda a altura da tela */
   float: center;/*centraliza a logo no centro*/
   margin: auto; /*centraliza a logo no centro*/
   display: flex;/*centraliza a logo no centro*/
   align-items: flex-start; /* Alinha os itens no topo */
+  
+}
+
+.ft-perfil2{
+height: 40px; /* Define a altura do corpo para ocupar toda a altura da tela */
+float: center;/*centraliza a logo no centro*/
+margin: auto; /*centraliza a logo no centro*/
+display: flex;/*centraliza a logo no centro*/
+align-items: flex-start; /* Alinha os itens no topo */
 }
 
 .produto {
-  margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 .preco {
-  margin-left: 10px;
+margin-left: 10px;
 }
 
 #carrinho {
-  list-style-type: none;
+list-style-type: none;
 }
 
 
 header {
-    background-color: #000000; /* Configura o fundo do menu de cima */
-    color: #fff; /* Configura a cor do texto do menu de cima */
-    text-align: center;
-    padding: 1%;
+  background-color: #000000; /* Configura o fundo do menu de cima */
+  color: #fff; /* Configura a cor do texto do menu de cima */
+  text-align: center;
+  padding: 1%;
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  background-color: #000000; /* Configura o fundo do menu de baixo */
-  padding: 0.8em;
-  border: 3px solid #ffffff; /* Adiciona uma borda de 1px sólida com a cor #ddd */
-  border-radius: 10px;
+display: flex;
+justify-content: center;
+background-color: #000000; /* Configura o fundo do menu de baixo */
+padding: 0.8em;
+border: 3px solid #ffffff; /* Adiciona uma borda de 1px sólida com a cor #ddd */
+border-radius: 10px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #ffffff; /* Configura a cor do texto do menu de baixo */
-    padding: 0.5em 1em;
-    border-radius: 5px; /* Faz borda e arredonda o botão */
-    transition: background-color 0.3s;
-    position: relative; /* Adiciona posição relativa para o posicionamento do submenu */
+  text-decoration: none;
+  color: #ffffff; /* Configura a cor do texto do menu de baixo */
+  padding: 0.5em 1em;
+  border-radius: 5px; /* Faz borda e arredonda o botão */
+  transition: background-color 0.3s;
+  position: relative; /* Adiciona posição relativa para o posicionamento do submenu */
 }
 
 nav a:hover {
-    background-color: #333; /* Configura a cor de fundo quando passa o mouse em cima do texto (menu de baixo) */
-    color: rgba(0, 114, 196, 1); /* Configura a cor do texto quando passa o mouse em cima do texto (menu de baixo) */
+  background-color: #333; /* Configura a cor de fundo quando passa o mouse em cima do texto (menu de baixo) */
+  color: rgba(0, 114, 196, 1); /* Configura a cor do texto quando passa o mouse em cima do texto (menu de baixo) */
 }
 
- /* Adicione estilos para o conteúdo abaixo do submenu */
- .conteudo-submenu {
-    display: none;
-    padding: 10px;
-    background-color: #333;
-    color: #ffffff;
-    margin-top: 10px;
-    border-radius: 5px;
+/* Adicione estilos para o conteúdo abaixo do submenu */
+.conteudo-submenu {
+  display: none;
+  padding: 10px;
+  background-color: #333;
+  color: #ffffff;
+  margin-top: 10px;
+  border-radius: 5px;
 }
 
 .conteudo-submenu.mostrar {
-    display: block;
+  display: block;
 }
 
 /*configura o botâo "back"*/
 .botao-voltar {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #050505; /* Cor de fundo */
-    color: #ffffff; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado padrão */
-    border-radius: 5px; /* Borda arredondada */
-    transition: background-color 0.3s; /* Transição suave de cor de fundo */
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #050505; /* Cor de fundo */
+  color: #ffffff; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado padrão */
+  border-radius: 5px; /* Borda arredondada */
+  transition: background-color 0.3s; /* Transição suave de cor de fundo */
 }
 
 /* Estilos para o link de voltar ao passar o mouse */
-  .botao-voltar:hover {
-    background-color: #333; /* Cor de fundo alterada ao passar o mouse */
-    color: rgba(0, 114, 196, 1);
+.botao-voltar:hover {
+  background-color: #333; /* Cor de fundo alterada ao passar o mouse */
+  color: rgba(0, 114, 196, 1);
 }
 
 .carrinho {
-  background-color: #151c35; /* Cor de fundo*/
-  border: none; /* Remove a borda */
-  padding: 1px 2px; /* Preenchimento interno */
-  border-radius: 2px; /* Bordas arredondadas */
-  cursor: pointer; /* Cursor em forma de mão */
-  transition: 0.3s; /* Transição de cor suave */
-  position: absolute; /* Posicionamento absoluto */
-  top: 20px; /* Posição superior */
-  right: 20px; /* Posição à direita */
-  width: 40px; /* Largura do botão */
-  height: 40px; /* Altura do botão */
+background-color: #151c35; /* Cor de fundo*/
+border: none; /* Remove a borda */
+padding: 1px 2px; /* Preenchimento interno */
+border-radius: 2px; /* Bordas arredondadas */
+cursor: pointer; /* Cursor em forma de mão */
+transition: 0.3s; /* Transição de cor suave */
+position: absolute; /* Posicionamento absoluto */
+top: 20px; /* Posição superior */
+right: 20px; /* Posição à direita */
+width: 40px; /* Largura do botão */
+height: 40px; /* Altura do botão */
 }
 
 .botao-perfil {
-  background-color: #ffffff; /* Cor de fundo do botão */
-  border: none; /* Remove a borda do botão */
-  padding: 1px 2px; /* Adiciona preenchimento interno ao botão */
-  border-radius: 20px; /* Arredonda as bordas do botão */
-  cursor: pointer; /* Altera o cursor para um ponteiro quando o mouse passa sobre o botão */
-  transition: 0.3s; /* Transição suave de cor de fundo */
-  position: absolute; /* Posicione o elemento absolutamente */
-  top: 20px; /* Defina a posição superior */
-  right: 63px; /* Defina a posição direita */
+background-color: #ffffff; /* Cor de fundo do botão */
+border: none; /* Remove a borda do botão */
+padding: 1px 2px; /* Adiciona preenchimento interno ao botão */
+border-radius: 20px; /* Arredonda as bordas do botão */
+cursor: pointer; /* Altera o cursor para um ponteiro quando o mouse passa sobre o botão */
+transition: 0.3s; /* Transição suave de cor de fundo */
+position: absolute; /* Posicione o elemento absolutamente */
+top: 20px; /* Defina a posição superior */
+right: 63px; /* Defina a posição direita */
 }
 
 .ajuda {
-  background-color: #151c35; /* Cor de fundo */
-  border: none; /* Remove a borda */
-  padding: 1px 2px; /* Preenchimento interno */
-  border-radius: 2px; /* Bordas arredondadas */
-  cursor: pointer; /* Cursor em forma de mão */
-  transition: 0.3s; /* Transição de cor suave */
-  position: absolute; /* Posicionamento absoluto */
-  width: 40px; /* Largura do botão */
-  height: 40px; /* Altura do botão */
-  top: 20px; /* Defina a posição superior */
-  right: 197px; /* Defina a posição direita */
+background-color: #151c35; /* Cor de fundo */
+border: none; /* Remove a borda */
+padding: 1px 2px; /* Preenchimento interno */
+border-radius: 2px; /* Bordas arredondadas */
+cursor: pointer; /* Cursor em forma de mão */
+transition: 0.3s; /* Transição de cor suave */
+position: absolute; /* Posicionamento absoluto */
+width: 40px; /* Largura do botão */
+height: 40px; /* Altura do botão */
+top: 20px; /* Defina a posição superior */
+right: 197px; /* Defina a posição direita */
 }
 
 .login {
-  width: 77,4px; /* Defina a largura desejada para a navegação */
-  padding: 0px; /* Adicione preenchimento interno aos links */
-  justify-content: left;
-  background-color: 151c35; /* Cor de fundo*/
-  position: absolute; /* Posicione o elemento absolutamente */
-  top: 20px; /* Defina a posição superior */
-  right: 112px; /* Defina a posição direita */
+width: 77,4px; /* Defina a largura desejada para a navegação */
+padding: 0px; /* Adicione preenchimento interno aos links */
+justify-content: left;
+background-color: 151c35; /* Cor de fundo*/
+position: absolute; /* Posicione o elemento absolutamente */
+top: 20px; /* Defina a posição superior */
+right: 112px; /* Defina a posição direita */
 }
 
 
 .carrinho:hover {
-  background-color:rgba(0, 114, 196, 1);
+background-color:rgba(0, 114, 196, 1);
 }
 
 .ajuda:hover {
-  background-color:rgba(0, 114, 196, 1);
+background-color:rgba(0, 114, 196, 1);
 }
 
 .botao-perfil:hover {
-  background-color:rgba(0, 114, 196, 1);
+background-color:rgba(0, 114, 196, 1);
 }
 
 .linha-de-imagens {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
 }
 
 
 /* configuração carrossel */
 .carousel {
-    width: 100%;
-    overflow: hidden;
-  }
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease;
   
-  .carousel-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    
-  }
-  
-  .carousel-item {
-    flex: 0 0 100%;
-  }
-  
-  .carousel-item img {
-    max-width: 50%;
-    max-height: 100%;
-  }
-  
-  /* configuração do rodapé */
-  footer {
-    background-color: #0a0a0a;
-    color: white;
-    padding: 35px 0;
-  }
-  
-  .rodape {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .rodape-links a {
-    margin-right: 20px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-  }
-  
-  .rodape-info {
-    margin-top: 10px;
-  }
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-item img {
+  max-width: 50%;
+  max-height: 100%;
+}
+
+/* configuração do rodapé */
+footer {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 35px 0;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rodape-links a {
+  margin-right: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.rodape-info {
+  margin-top: 10px;
+}
