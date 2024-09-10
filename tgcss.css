@@ -165,17 +165,15 @@ right: 63px; /* Defina a posição direita */
 }
 
 .ajuda {
-background-color: #151c35; /* Cor de fundo */
-border: none; /* Remove a borda */
-padding: 1px 2px; /* Preenchimento interno */
-border-radius: 2px; /* Bordas arredondadas */
-cursor: pointer; /* Cursor em forma de mão */
-transition: 0.3s; /* Transição de cor suave */
-position: absolute; /* Posicionamento absoluto */
-width: 40px; /* Largura do botão */
-height: 40px; /* Altura do botão */
-top: 20px; /* Defina a posição superior */
-right: 197px; /* Defina a posição direita */
+  background-color: #ffffff; /* Cor de fundo do botão */
+  border: none; /* Remove a borda do botão */
+  padding: 1px 2px; /* Adiciona preenchimento interno ao botão */
+  border-radius: 20px; /* Arredonda as bordas do botão */
+  cursor: pointer; /* Altera o cursor para um ponteiro quando o mouse passa sobre o botão */
+  transition: 0.3s; /* Transição suave de cor de fundo */
+  position: absolute; /* Posicione o elemento absolutamente */
+  top: 20px; /* Defina a posição superior */
+  left: 63px; /* Defina a posição direita */
 }
 
 .login {
