@@ -27,6 +27,13 @@ float: left;
 text-align: center;
 }
 
+
+
+.imagem-sobre-menu {
+  width: 200px; /* Ajusta o tamanho das imagens */
+  height: auto;
+}
+
 svg {
 font-family: "Russo One", sans-serif;
 width: 100%; height: 100%;
@@ -203,6 +210,9 @@ background-color:rgba(0, 114, 196, 1);
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
+display: inline-block;
+text-align: center;
+margin-right: 20px; /* Espaço entre os blocos */
 }
 
 
