@@ -17,6 +17,8 @@ margin: 0 10px 20px 0; /* Adiciona margem à direita e inferior para separar as 
 display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
+text-decoration: none;
+
 }
 
 .menu-flutuante {
@@ -206,14 +208,6 @@ background-color:rgba(0, 114, 196, 1);
 background-color:rgba(0, 114, 196, 1);
 }
 
-.linha-de-imagens {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-
-}
-
-
 /* configuração carrossel */
 .carousel {
   display: flex;
@@ -265,4 +259,28 @@ footer {
 
 .rodape-info {
   margin-top: 10px;
+}
+
+.imagem-sobre-menu {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagem-sobre-menu:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-item img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.carousel-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
