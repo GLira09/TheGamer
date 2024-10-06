@@ -236,7 +236,7 @@ background-color:rgba(0, 114, 196, 1);
 }
 
 .botao-perfil:hover {
-background-color:rgba(0, 114, 196, 1);
+background-color:rgb(0, 114, 196);
 }
 
 /* configuração carrossel */
@@ -309,4 +309,73 @@ footer {
 .carousel-item img:hover {
   transform: scale(1.03);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto; /* Centraliza horizontalmente */
+  padding: 30px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(90, 90, 90, 0.584);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #000000;
+  color: white; /* Texto branco */
+}
+
+button {
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0072c4;
+}
+
+.botao-container-vertical {
+  display: flex;
+  flex-direction: column; /* Alinha os botões em coluna */
+  gap: 10px; /* Adiciona um espaço entre os botões */
+  margin-top: -90px; /* Espaçamento superior para afastar do formulário */
+  align-items: center; /* Centraliza os botões */
+}
+
+button {
+  width: 100%; /* Faz com que os botões ocupem 100% da largura do contêiner */
+  max-width: 300px; /* Define uma largura máxima para os botões */
 }
