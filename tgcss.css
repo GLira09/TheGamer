@@ -375,7 +375,3 @@ button:hover {
   align-items: center; /* Centraliza os botões */
 }
 
-button {
-  width: 100%; /* Faz com que os botões ocupem 100% da largura do contêiner */
-  max-width: 300px; /* Define uma largura máxima para os botões */
-}
