@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gamer</title>
+    <link rel="stylesheet" href="../css/tgcss.css">
+    <link rel="stylesheet" href="../css/imgcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="website icon" type="png" href="..\loja\imagens\GL-icon.png">
+
+    
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+        svg text {
+            font-size: 90px; /* Defina o tamanho desejado para o texto */
+        }
+
+        /* Estilos para a imagem */
+        .imagem-sobre-menu {
+            width: 300px; /* Defina o tamanho desejado para a imagem */
+            float: left; /* Faz com que a imagem flutue para a esquerda */
+            margin-right: 20px; /* Adiciona margem à direita para separar a imagem do texto */
+        }
+
+        /* Estilos para o texto ao lado da imagem */
+        .texto-ao-lado-da-imagem {
+            float: left; /* Faz com que o texto flutue para a esquerda */
+        }
+    </style>
+</head>
+<body>
+
+<a href="carrinho.html"><button class="carrinho"><img class="carrinho1" src="imgs/carrinho1.png" alt="Carrinho de Compra" style="width: 40px; height: 40px;"></button>
+    <a href="perfil.html"><button class="botao-perfil"><img class="ft-perfil2" src="imgs/ft-perfil2.png" alt="perfil"  style="width: 40px; height: 40px;"></button></a>
+    <a href="ajuda.html"><button class="ajuda"><img class="ft-perfil2" src="imgs/ajuda.png" alt="ajuda"></button></a>
+    <nav class="login">
+        <a href="login.html">Login</a>
+        </nav>
+  <!--logo do site-->
+    <br>
+    <img class="tg-icon" src="..\TheGamer\imgs\thegamer-logo.png" alt="TheGamer Icon">
+
+    
+
+    <!--header pra deixar o texto centralizado-->
+    <header>
+      <br> <br> 
+
+      <!--botao "back"-->
+      <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
+      
+    <br> <br> <br> <br> <br> <br> <br> <br> 
+
+    <div>
+        <img class="imagem-sobre-menu" src="../TheGamer/imgs/GTA5.jpg" alt="Grand Theft Auto">
+        
+        
+        <div class="texto-ao-lado-da-imagem">
+            <h2>Grand Theft Auto</h2>
+            <p>Aqui está a descrição do produto ou qualquer outro texto que você queira adicionar ao lado da imagem.</p>
+         <br> <br>
+        </div>
+    </div>
+
+    <div id="produtos">
+        <div class="produto">
+            <a href="Carrinho.html"><button>Adicionar ao Carrinho</button></a>
+        </div>
+
+    <script src="js-carrossel.js"></script>
+
+    <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+
+
+
+
+
+
+
+
+    <br> <br> <br> <br> <br> <br> <br> <br>
+    <br> <br> <br> <br> <br> <br> <br> <br> 
+    <br> <br> <br> <br> <br> <br> <br> <br> 
+    <br> <br> <br> <br> <br> <br> <br> <br> 
+
+    <footer>
+        <div class="rodape">
+            <div class="rodape-links">
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Contato</a>
+                <a href="#">Termos de Serviço</a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <br>
+            <div class="rodape-info">
+                <p>&copy; 2024 MeuSite | Todos os direitos reservados</p>
+                
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
