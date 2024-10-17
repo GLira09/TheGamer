@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cadastro Seguro</title>
     <link rel="stylesheet" href="../css/tgcss.css">
     <link rel="website icon" type="png" href="../imgs/thegamer-logo5.png">
 </head>
 <body>
 
-    <img class="tg-icon" src="..\TheGamer\imgs\thegamer-logo.png" alt="TheGamer Icon">
+    <img class="tg-icon" src="..\imgs\thegamer-logo.png" alt="TheGamer Icon">
     <br><br>
           
-        <nav>
-            <a href="index.html">Home<span>&#9662;</span></a>
-            <a href="jogos.html">Jogos<span>&#9662;</span></a>
-            <a href="aparelhos.html">Aparelhos<span>&#9662;</span></a>
-            <a href="giftcards.html">GiftsCards<span>&#9662;</span></a>
-       </nav>
+    <nav>
+        <a href="index.html">Home<span>&#9662;</span></a>
+        <a href="jogos.html">Jogos<span>&#9662;</span></a>
+        <a href="aparelhos.html">Aparelhos<span>&#9662;</span></a>
+        <a href="giftcards.html">GiftsCards<span>&#9662;</span></a>
+    </nav>
 
-       <br> <br> <br> <br>
+    <br> <br> <br> <br>
 
     <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
 
@@ -29,32 +29,38 @@
 
     <div class="form-container">
         <h2>Cadastro</h2>
-        <form action="#" method="post">
+        <!-- Formulário PHP  de registro login -->
+        <form action="cadastro.php" method="post">
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
-    
+
             <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" required>
-    
-            <label for="nome">Nome: </label>
+            <input type="password" id="senha" name="senha" minlength="8" required>
+
+            <label for="confirma_senha">Confirmar Senha:</label>
+            <input type="password" id="confirma_senha" name="confirma_senha" minlength="8" required>
+
+            <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
-    
+
             <label for="endereco">Endereço:</label>
             <input type="text" id="endereco" name="endereco" required>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" placeholder="12345-678" required>
+        
+        
+            <button type="submit">Confirmar</button> 
         </form>
     </div>
-    
-    <!-- Botões fora do formulário -->
+
+  <!-- Botões fora do formulário -->
     <div class="botao-container-vertical">
-        <a href="index.html"><button type="submit">Confirmar</button></a>
         <a href="logar.html"><button type="button">Já tenho conta</button></a>
         <a href="cadastro.html"><button type="button">Fazer cadastro</button></a>
-        
     </div>
-    
 
-
-
+  
 
 
 <br> <br> <br> <br> <br> <br> 
