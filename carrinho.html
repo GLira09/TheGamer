@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="../css/tgcss.css"> <!-- Arquivo CSS para a estilização -->
+</head>
+<body>
+
+    <!-- Cabeçalho com ícone e menu de navegação -->
+    <header>
+        <img class="tg-icon" src="../imgs/thegamer-logo.png" alt="TheGamer Icon">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="jogos.html">Jogos</a>
+            <a href="aparelhos.html">Aparelhos</a>
+            <a href="giftcards.html">GiftCards</a>
+        </nav>
+    </header>
+
+    <!-- Link para voltar à página anterior -->
+    <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
+
+    <!-- Seção principal do Carrinho de Compras -->
+    <section class="carrinho-container">
+        <h1>Carrinho de Compras</h1>
+        
+        <div class="carrinho-itens">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Preço</th>
+                        <th>Total</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Exemplo de item no carrinho -->
+                    <tr>
+                        <td>Jogo Exemplo</td>
+                        <td>1</td>
+                        <td>R$ 199,90</td>
+                        <td>R$ 199,90</td>
+                        <td><button class="remover-item">X</button></td>
+                    </tr>
+                    <tr>
+                        <td>Acessório Exemplo</td>
+                        <td>2</td>
+                        <td>R$ 89,90</td>
+                        <td>R$ 179,80</td>
+                        <td><button class="remover-item">X</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Total Geral e Botão para Finalizar Compra -->
+        <div class="total-container">
+            <p>Total Geral: <span>R$ 379,70</span></p>
+            <button class="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="rodape">
+            <div class="rodape-links">
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Contato</a>
+                <a href="#">Termos de Serviço</a>
+            </div>
+            <div class="rodape-info">
+                <p>&copy; 2024 MeuSite | Trabalho Escolar</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
