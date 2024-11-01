@@ -1,115 +1,164 @@
 <?php
-// Inicia a sessão
-session_start();
+// Conexão com o banco de dados
+$servername = "localhost";
+$username = "seu_usuario";
+$password = "sua_senha";
+$dbname = "the_gamer";
 
-// Verifica se a variável de sessão 'carrinho' não está definida e a define como um array vazio
-if (!isset($_SESSION['carrinho'])) {
-    $_SESSION['carrinho'] = array();
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexão
+if ($conn->connect_error) {
+    die("Conexão falhou: " . $conn->connect_error);
 }
 
-// Adiciona produto ao carrinho
-if (isset($_GET['acao'])) {
-    // ADICIONAR AO CARRINHO
-    if ($_GET['acao'] == 'add') {
-        $id = intval($_GET['id']);
-        // Verifica se o produto já existe no carrinho, se sim, incrementa a quantidade
-        if (isset($_SESSION['carrinho'][$id])) {
-            $_SESSION['carrinho'][$id] += 1;
-        } else {
-            // Se o produto não existe no carrinho, adiciona-o com quantidade 1
-            $_SESSION['carrinho'][$id] = 1;
-        }
-    }
-    // REMOVER DO CARRINHO
-    elseif ($_GET['acao'] == 'del') {
-        $id = intval($_GET['id']);
-        // Verifica se o produto está no carrinho e o remove
-        if (isset($_SESSION['carrinho'][$id])) {
-            unset($_SESSION['carrinho'][$id]);
-        }
-    }
-    // ALTERAR QUANTIDADE
-    elseif ($_GET['acao'] == 'up') {
-        if (is_array($_POST['prod'])) {
-            foreach ($_POST['prod'] as $id => $qtd) {
-                // Converte o id e a quantidade para inteiros
-                $id = intval($id);
-                $qtd = intval($qtd);
-                // Verifica se a quantidade é válida, se sim, atualiza a quantidade no carrinho, caso contrário, remove o produto do carrinho
-                if (!empty($qtd) || $qtd <> 0) {
-                    $_SESSION['carrinho'][$id] = $qtd;
-                } else {
-                    unset($_SESSION['carrinho'][$id]);
-                }
-            }
-        }
-    }
-}
+// Obter o ID do usuário para carregar o carrinho (exemplo: usuário com id = 1)
+$id_usuario = 1; // Isso geralmente viria da sessão do usuário logado
+
+// Consulta SQL para obter produtos no carrinho do usuário
+$sql = "SELECT 
+            Compras.id_compra,
+            Compras.quantidade,
+            Compras.tipo_produto,
+            Jogos.titulo AS titulo_jogo,
+            Jogos.preco AS preco_jogo,
+            Consoles.nome AS titulo_console,
+            Consoles.preco AS preco_console
+        FROM Compras
+        LEFT JOIN Jogos ON Compras.tipo_produto = 'jogo' AND Compras.id_produto = Jogos.id_jogo
+        LEFT JOIN Consoles ON Compras.tipo_produto = 'console' AND Compras.id_produto = Consoles.id_console
+        WHERE Compras.id_usuario = $id_usuario";
+
+$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de compras</title>
+    <title>Carrinho de Compras - The Gamer</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            background-color: #1c2a48;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar, .carrinho-container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #111;
+        }
+
+        /* Estilos da Navbar */
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        /* Produto no carrinho */
+        .produto {
+            display: flex;
+            align-items: center;
+            background-color: #293b5f;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .produto img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .produto-info {
+            flex-grow: 1;
+            text-align: left;
+            margin-left: 10px;
+        }
+        .produto-info h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .quantidade input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background-color: #111;
+            color: white;
+        }
+
+    </style>
 </head>
-<body>  
-<table>
-<thead>
-    <tr>
-        <th width="244">Produto</th>
-        <th width="79">Quantidade</th>
-        <th width="89">Pre&ccedil;o</th>
-        <th width="100">SubTotal</th>
-        <th width="64">Remover</th>
-    </tr>
-</thead>
-<tbody>
-<?php
-// Verifica se há produtos no carrinho
-if (count($_SESSION['carrinho']) == 0) {
-    echo '<tr><td colspan="5">Não há produtos no carrinho</td></tr>';
-} else {
-    require("conexao.php");
-    // Inicializa a variável total
-    $total = 0;
-    foreach ($_SESSION['carrinho'] as $id => $qtd) {
-        // Consulta SQL para obter as informações do produto
-        $sql = "SELECT * FROM produtos WHERE id = $id";
-        $qr = mysqli_query($conexao, $sql) or die(mysqli_error($conexao));
-        $in = mysqli_fetch_assoc($qr);
-        // Calcula o subtotal do produto
-        $sub = $in['preco'] * $qtd;
-        // Incrementa o total
-        $total += $sub;
-        // Exibe os detalhes do produto no carrinho
-        echo '<tr>
-                <td>'.$in['nome'].'</td>
-                <td><input type="text" size="3" name="prod['.$id.']" value="'.$qtd.'"></td>
-                <td>R$'.number_format($in['preco'], 2, ',', '.').'</td>
-                <td>R$'.number_format($sub, 2, ',', '.').'</td>
-                <td><a href="?acao=del&id='.$id.'">Remover</a></td>
-            </tr>';
-    }
-    // Exibe o total da compra
-    echo '<tr>
-            <td colspan="4">Total</td>
-            <td>R$'.number_format($total, 2, ',', '.').'</td>
-        </tr>';
-}
-?>
-</tbody>
-<tfoot>
-    <form action='?acao=up' method="post">
-        <tr>
-            <td colspan="5"><input type="submit" value="Atualizar Carrinho" /></td>
-        </tr>
-    </form>
-    <tr>
-        <td colspan="5"><a href="index.php">Continuar Comprando</a></td>
-    </tr>
-</tfoot>
-</table>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="menu">
+            <a href="#">Home</a>
+            <a href="#">Jogos</a>
+            <a href="#">Aparelhos</a>
+            <a href="#">GiftCards</a>
+        </div>
+    </div>
+
+    <!-- Carrinho de Compras -->
+    <div class="carrinho-container">
+        <h2>Carrinho de Compras</h2>
+
+        <?php
+        // Verificar se há produtos no carrinho
+        if ($result->num_rows > 0) {
+            // Iterar sobre cada item do carrinho
+            while($row = $result->fetch_assoc()) {
+                $titulo = $row['tipo_produto'] == 'jogo' ? $row['titulo_jogo'] : $row['titulo_console'];
+                $preco = $row['tipo_produto'] == 'jogo' ? $row['preco_jogo'] : $row['preco_console'];
+                $quantidade = $row['quantidade'];
+                $id_compra = $row['id_compra'];
+                $imagem = $row['tipo_produto'] == 'jogo' ? 'imagem_jogo.png' : 'imagem_console.png'; // Substitua pelas imagens reais
+        ?>
+
+        <div class="produto">
+            <img src="<?php echo $imagem; ?>" alt="<?php echo $titulo; ?>">
+            <div class="produto-info">
+                <h3><?php echo htmlspecialchars($titulo); ?></h3>
+                <p>Preço: R$ <?php echo number_format($preco, 2, ',', '.'); ?></p>
+            </div>
+            <div class="quantidade">
+                <form action="atualizar_carrinho.php" method="post">
+                    <input type="hidden" name="id_compra" value="<?php echo $id_compra; ?>">
+                    <input type="number" name="quantidade" min="1" value="<?php echo $quantidade; ?>">
+                    <button type="submit">Atualizar</button>
+                </form>
+            </div>
+        </div>
+
+        <?php
+            }
+        } else {
+            echo "<p>Seu carrinho está vazio.</p>";
+        }
+        $conn->close();
+        ?>
+    </div>
+
 </body>
 </html>

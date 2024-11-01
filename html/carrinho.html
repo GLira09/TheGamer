@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheGamer</title>
+    <link rel="stylesheet" href="../css/tgcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="website icon" type="png" href="../imgs/thegamer-logo5.png">
+</head>
+<body>
+<!--botão do carrinho-->
+<a href="carrinho.html"><button class="carrinho"><img class="carrinho1" src="../imgs/carrinho1.png" alt="Carrinho de Compra" style="width: 40px; height: 40px;"></button>
+
+<!--botão de perfil-->
+<a href="perfil.html"><button class="botao-perfil"><img class="ft-perfil2" src="../imgs/ft-perfil2.png" alt="perfil"  style="width: 40px; height: 40px;"></button></a>
+  
+<!--botão de perfil-->
+<a href="ajuda.html"><button class="ajuda"><img class="ft-perfil2" src="../imgs/ajuda.png" alt="ajuda"></button></a>
+
+<!--botão de login-->
+  <nav class="login">
+    <a href="login.html">Login</a>
+    </nav>
+    
+
+  <!--logo do site-->
+    <br>
+    <img class="tg-icon" src="../imgs/thegamer-logo.png" alt="TheGamer Icon">
+<br><br>
+      
+    <nav>
+        <a href="index.html">Home<span>&#9662;</span></a>
+        <a href="jogos.html">Jogos<span>&#9662;</span></a>
+        <a href="aparelhos.html">Aparelhos<span>&#9662;</span></a>
+        <a href="giftcards.html">GiftsCards<span>&#9662;</span></a>
+   </nav>
+    <style>
+       
+
+        .navbar, .carrinho-container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #111;
+        }
+
+        /* Estilos da Navbar */
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        /* Produto no carrinho */
+        .produto {
+            display: flex;
+            align-items: center;
+            background-color: #293b5f;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .h2{
+            
+        }
+
+        .produto img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .produto-info {
+            flex-grow: 1;
+            text-align: left;
+            margin-left: 10px;
+        }
+        .produto-info h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .quantidade input {
+            width: 50px;
+            padding: 5px;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background-color: #111;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <!-- Carrinho de Compras -->
+    <div class="carrinho-container">
+        <h2>Carrinho de Compras</h2>
+
+       
+
+        <div class="produto">
+            
+            <div class="produto-info">
+           
+            </div>
+            <div class="quantidade">
+                <form action="atualizar_carrinho.php" method="post">
+                    <input type="hidden" name="id_compra" value="<?php echo $id_compra; ?>">
+                    <input type="number" name="quantidade" min="1" value="<?php echo $quantidade; ?>">
+                    <button type="submit">Atualizar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
