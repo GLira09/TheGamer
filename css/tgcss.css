@@ -412,6 +412,9 @@ button:hover {
   border: 1px solid #ccc;
   background-color: #1f1f30;
   color: white;
+  resize: none; /* Desativa o redimensionamento manual */
+  overflow: auto; /* Mantém a barra de rolagem se o conteúdo ultrapassar */
+
 }
 
 .formulario-ajuda button {
