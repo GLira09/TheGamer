@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playstation 5</title>
+    <title>Playstation 5 | The Gamer</title>
     <link rel="stylesheet" href="../css/tgcss.css">
     <link rel="stylesheet" href="../css/imgcss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -13,137 +13,157 @@
         @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
         body {
-            background-color: #151c35; /* Fundo preto */
-            color: #fff; /* Texto branco */
+            background-color: #151c35; /* Fundo escuro */
+            color: #fff;
             font-family: 'Russo One', sans-serif;
         }
 
         .produto-info {
             display: flex;
             align-items: center;
-            justify-content: center; /* Centraliza horizontalmente */
+            justify-content: space-around;
+            flex-wrap: wrap;
             margin-top: 50px;
-            color: #fff;
-            flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
         }
 
         .imagem-sobre-menu {
-            width: 400px; /* Aumenta a largura da imagem */
-            max-width: 100%; /* Garante que não ultrapasse o limite da tela */
-            margin-right: 20px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
         }
 
         .texto-ao-lado-da-imagem {
-            max-width: 500px; /* Mantém a largura máxima do texto */
-            text-align: center; /* Centraliza o texto */
+            max-width: 500px;
+            text-align: left;
         }
 
         .produto-info h2 {
             font-size: 36px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            text-align: center;
         }
 
         .produto-info p {
             font-size: 18px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .preco {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
-            color: #ff0000;
+            color: #ff4747;
             margin-top: 15px;
         }
 
         .botao-adicionar {
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 18px;
             background-color: #444;
             color: #fff;
-            border: none;
+            border: 2px solid #fff;
+            border-radius: 8px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
-        .rodape-links a {
+        .botao-adicionar:hover {
+            background-color: #ff4747;
             color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 16px;
         }
 
         .produto-container {
-            background-color: #000; /* Fundo preto */
-            color: #fff; /* Texto branco */
-            width: 100%; /* Largura do quadrado ajustável */
-            max-width: 1370px; /* Largura máxima para telas grandes */
-            border: 3px solid #fff; /* Borda branca */
-            padding: 40px; /* Espaço interno */
-            border-radius: 8px; /* Bordas arredondadas */
-            text-align: center; /* Centralização do texto dentro do quadrado */
-            margin: 0 auto; /* Centraliza o container na tela */
+            background-color: #000;
+            border: 3px solid #fff;
+            border-radius: 8px;
+            padding: 40px;
+            max-width: 1370px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            background-color: #222;
+            padding: 15px;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .produto-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .imagem-sobre-menu {
+                margin-bottom: 20px;
+            }
+
+            .texto-ao-lado-da-imagem {
+                text-align: center;
+            }
+
+            .produto-info h2 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!--botão do carrinho-->
-    <a href="carrinho.php"><button class="carrinho"><img class="carrinho1" src="../imgs/carrinho1.png" alt="Carrinho de Compra" style="width: 40px; height: 40px;"></button></a>
+    <!-- Cabeçalho -->
+    <header>
+        <div style="text-align: right; padding: 10px;">
+            <a href="carrinho.html"><button class="carrinho"><img src="../imgs/carrinho1.png" alt="Carrinho" style="width: 40px; height: 40px;"></button></a>
+            <a href="perfil.html"><button class="botao-perfil"><img src="../imgs/ft-perfil2.png" alt="Perfil" style="width: 40px; height: 40px;"></button></a>
+            <a href="ajuda.html"><button class="ajuda"><img src="../imgs/ajuda.png" alt="Ajuda" style="width: 40px; height: 40px;"></button></a>
+            <nav class="login">
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+        <img class="tg-icon" src="../imgs/thegamer-logo.png" alt="The Gamer">
+        <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
+    </header>
 
-    <!--botão de perfil-->
-    <a href="perfil.html"><button class="botao-perfil"><img class="ft-perfil2" src="../imgs/ft-perfil2.png" alt="perfil" style="width: 40px; height: 40px;"></button></a>
-
-    <!--botão de ajuda-->
-    <a href="ajuda.html"><button class="ajuda"><img class="ft-perfil2" src="../imgs/ajuda.png" alt="ajuda"></button></a>
-
-    <!--link de login-->
-    <nav class="login">
-        <a href="login.html">Login</a>
-    </nav>
-        
-    <!--logo do site-->
-    <br>
-    <img class="tg-icon" src="../imgs/thegamer-logo.png" alt="TheGamer Icon">
-    <br><br>
-
-    <!--botão "back"-->
-    <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
-    <br><br><br>
-
-    <div class="produto-container">
-        <!-- Informações do Produto -->
-        <div class="produto-info">
-            <img class="imagem-sobre-menu" src="../imgs/playstation5.jpg" alt="Imagem do Produto">
-            
-            <div class="texto-ao-lado-da-imagem">
-                <h2>Playstation 5</h2>
-                <p>O PlayStation 5, da Sony, oferece gráficos de última geração com resolução 4K, carregamentos ultrarrápidos graças ao SSD customizado e uma experiência de jogo envolvente com áudio 3D e controles hápticos no DualSense. Além de uma biblioteca robusta de jogos exclusivos, o PS5 redefine o que é possível em jogos de console, oferecendo tanto uma edição com leitor de disco quanto uma versão digital.</p>
-                <p class="preco">R$5.000,00</p>
-                <button class="botao-adicionar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+    <!-- Conteúdo Principal -->
+    <main>
+        <div class="produto-container">
+            <div class="produto-info">
+                <img class="imagem-sobre-menu" src="../imgs/playstation5.jpg" alt="Imagem do Playstation 5">
+                <div class="texto-ao-lado-da-imagem">
+                    <h2>Playstation 5</h2>
+                    <p>O PlayStation 5 redefine a experiência de jogos com gráficos 4K, SSD ultrarrápido e controles DualSense com feedback tátil. Tenha acesso a uma biblioteca incrível de jogos e tecnologia de ponta para imersão completa.</p>
+                    <p class="preco">R$5.000,00</p>
+                    <button class="botao-adicionar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
 
     <script>
         function adicionarAoCarrinho() {
             alert("Produto adicionado ao carrinho!");
-            // Código adicional para adicionar ao carrinho
         }
     </script>
 
+    <!-- Rodapé -->
     <footer>
-        <div class="rodape">
-            <div class="rodape-links">
-                <a href="#">Sobre</a>
-                <a href="#">Ajuda</a>
-                <a href="#">Contato</a>
-                <a href="#">Termos de Serviço</a>
-            </div>
-            <br>
-            <div class="rodape-info">
-                <p>&copy; 2024 The Gamer | Todos os direitos reservados</p>
-            </div>
+        <p>&copy; 2024 The Gamer | Todos os direitos reservados</p>
+        <div>
+            <a href="#">Sobre</a>
+            <a href="#">Ajuda</a>
+            <a href="#">Contato</a>
+            <a href="#">Termos de Serviço</a>
         </div>
     </footer>
 
