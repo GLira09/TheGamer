@@ -1,102 +1,113 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Meta informações para a codificação de caracteres e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheGamer</title>
+
+    <!-- Inclusão de arquivos CSS externos -->
     <link rel="stylesheet" href="../css/tgcss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="website icon" type="png" href="../imgs/thegamer-logo5.png">
 </head>
 
 <body>
-<!--botão do carrinho-->
-<a href="carrinho.html"><button class="carrinho"><img class="carrinho1" src="../imgs/carrinho1.png" alt="Carrinho de Compra" style="width: 40px; height: 40px;"></button>
+    <!-- Botão do carrinho de compras -->
+    <a href="carrinho.html">
+        <button class="carrinho">
+            <img class="carrinho1" src="../imgs/carrinho1.png" alt="Carrinho de Compra" style="width: 40px; height: 40px;">
+        </button>
+    </a>
 
-  <!--botão de perfil-->
-  <a href="perfil.html"><button class="botao-perfil"><img class="ft-perfil2" src="../imgs/ft-perfil2.png" alt="perfil"  style="width: 40px; height: 40px;"></button></a>
+    <!-- Botão de perfil do usuário -->
+    <a href="perfil.html">
+        <button class="botao-perfil">
+            <img class="ft-perfil2" src="../imgs/ft-perfil2.png" alt="perfil" style="width: 40px; height: 40px;">
+        </button>
+    </a>
     
-  <!--botão de perfil-->
-  <a href="ajuda.html"><button class="ajuda"><img class="ft-perfil2" src="../imgs/ajuda.png" alt="ajuda"></button></a>
+    <!-- Botão de ajuda -->
+    <a href="ajuda.html">
+        <button class="ajuda">
+            <img class="ft-perfil2" src="../imgs/ajuda.png" alt="ajuda">
+        </button>
+    </a>
 
-<!--botão de login-->
-  <nav class="login">
-    <a href="login.html">Login</a>
+    <!-- Link de login -->
+    <nav class="login">
+        <a href="login.html">Login</a>
     </nav>
     
-<!--logo do site-->
-<br>
-<img class="tg-icon" src="../imgs/thegamer-logo.png" alt="TheGamer Icon">
-<br><br>
+    <!-- Logo do site -->
+    <br>
+    <img class="tg-icon" src="../imgs/thegamer-logo.png" alt="TheGamer Icon">
+    <br><br>
       
-   <nav>
-
+    <!-- Navegação principal do site -->
+    <nav>
         <a href="index.html">Home<span>&#9662;</span></a>
         <a href="jogos.html">Jogos<span>&#9662;</span></a>
         <a href="aparelhos.html">Aparelhos<span>&#9662;</span></a>
         <a href="giftcards.html">GiftsCards<span>&#9662;</span></a>
-        
-   </nav>
+    </nav>
 
-<br><br><br>
+    <br><br><br>
 
-<a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
+    <!-- Botão de voltar à página anterior -->
+    <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
 
-<br> <br> <br> <br> <br>
-<div class="test">
-<h1>XBOX</h1>
-</div>
-<br> <br><br> <br>
+    <br><br><br><br><br>
+    <div class="test">
+        <h1>XBOX</h1>
+    </div>
+    <br><br><br> <br>
 
+    <!-- Menu flutuante para categorias de consoles -->
+    <nav class="menu-flutuante">
+        <ul>
+            <li>
+                <a href="aparelhos.html">Todos os consoles<span>&#9662;</span></a>
+                <ul>
+                    <li><a href="playstation.html">Playstation</a></li>
+                    <li><a href="nintendo.html">Nintendo</a></li>
+                    <li><a href="xbox.html">Xbox</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-<nav class="menu-flutuante">
-    <ul>
-        <li>
-            <a href="aparelhos.html">Todos os consoles<span>&#9662;</span></a>
-            <ul>
-                <li><a href="playstation.html">Playstation</a></li>
-                <li><a href="nintendo.html">Nintendo</a></li>
-                <li><a href="xbox.html">Xbox</a></li>
-            </ul>
-        </li>
-    </ul>
-    
-</nav>
-
-
-    <!-- Contêiner para as imagens -->
+    <!-- Contêiner para as imagens de produtos -->
     <div class="linha-de-imagens">
-      <div>
-        <a href="#"><img class="imagem-sobre-menu" src="../imgs/xbox-serie-s-branco.jpg" alt="xbox serie s branco"></a>
-          <br>Xbox Serie S Branco
-      </div>
+        <div>
+            <a href="#">
+                <img class="imagem-sobre-menu" src="../imgs/xbox-serie-s-branco.jpg" alt="xbox serie s branco">
+            </a>
+            <br>Xbox Serie S Branco
+        </div>
 
-      
-
-      <div>
-        <a href="#"><img class="imagem-sobre-menu" src="../imgs/xbox-serie-x.jpeg" alt="xbox serie X"></a>
-          <br>Xbox Serie X
-      </div>
-
-
-
-
-          
-      
+        <div>
+            <a href="#">
+                <img class="imagem-sobre-menu" src="../imgs/xbox-serie-x.jpeg" alt="xbox serie X">
+            </a>
+            <br>Xbox Serie X
+        </div>
     </div>
-          <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br><br> <br>
-<footer>
-    <div class="rodape">
-      <div class="rodape-links">
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-        <a href="#">Termos de Serviço</a>
-      </div>
-      <div class="rodape-info">
-        <p>&copy; 2024 MeuSite | Todos os direitos reservados</p>
-      </div>
-    </div>
-  </footer>
     
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Rodapé com informações e links do site -->
+    <footer>
+        <div class="rodape">
+            <div class="rodape-links">
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+                <a href="#">Termos de Serviço</a>
+            </div>
+            <div class="rodape-info">
+                <p>&copy; 2024 MeuSite | Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
