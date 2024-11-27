@@ -9,58 +9,83 @@
 </head>
 <body>
 
-    <img class="tg-icon" src="..\imgs\thegamer-logo.png" alt="TheGamer Icon">
+    <!-- Logo do site -->
+    <img class="tg-icon" src="../imgs/thegamer-logo.png" alt="TheGamer Icon">
     <br><br>
           
+    <!-- Navegação -->
     <nav>
         <a href="index.html">Home<span>&#9662;</span></a>
         <a href="jogos.html">Jogos<span>&#9662;</span></a>
         <a href="aparelhos.html">Aparelhos<span>&#9662;</span></a>
-        <a href="giftcards.html">GiftsCards<span>&#9662;</span></a>
+        <a href="giftcards.html">GiftCards<span>&#9662;</span></a>
     </nav>
 
-    <br> <br> <br> <br>
+    <br><br><br><br>
 
+    <!-- Botão voltar -->
     <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
 
+    <!-- Título da página -->
     <div class="test">
-        <br> <br> <br><h1>LOGIN</h1>
+        <br><br><br>
+        <h1>LOGIN</h1>
     </div>
 
+    <!-- Formulário de cadastro -->
     <div class="form-container">
         <h2>Cadastro</h2>
-        <!-- Formulário PHP  de registro login -->
         <form action="cadastro.php" method="post">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <fieldset>
+                <legend>Informações Pessoais</legend>
 
-            <label for="senha">Senha:</label>
-            <input type="password" id="senha" name="senha" minlength="8" required>
+                <!-- Campo Nome -->
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome completo" aria-label="Nome completo" required>
 
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+                <!-- Campo E-mail -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" aria-label="E-mail" required>
 
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" required>
+                <!-- Campo Telefone (opcional) -->
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(99) 99999-9999" 
+                       title="Formato esperado: (99) 99999-9999" aria-label="Telefone (opcional)">
+            </fieldset>
 
-            <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" placeholder="12345-678" required>
-        
-        
-            <button type="submit">Confirmar</button> 
+            <fieldset>
+                <legend>Informações de Endereço</legend>
+
+                <!-- Campo Endereço -->
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Rua, número e complemento" aria-label="Endereço" required>
+
+                <!-- Campo CEP -->
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" pattern="\d{5}-?\d{3}" placeholder="12345-678" 
+                       title="Formato esperado: 12345-678" aria-label="CEP" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Criação de Conta</legend>
+
+                <!-- Campo Senha -->
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" minlength="8" placeholder="Mínimo 8 caracteres" aria-label="Senha" required>
+            </fieldset>
+
+            <button type="submit">Confirmar</button>
         </form>
     </div>
 
-  <!-- Botões fora do formulário -->
+    <!-- Botões adicionais -->
     <div class="botao-container-vertical">
         <a href="logar.html"><button type="button">Já tenho conta</button></a>
-        <a href="cadastro.html"><button type="button">Fazer cadastro</button></a>
     </div>
 
-  
+    <br><br><br><br><br><br> 
 
-
-<br> <br> <br> <br> <br> <br> 
+    <!-- Rodapé -->
     <footer>
         <div class="rodape">
             <div class="rodape-links">
@@ -71,7 +96,6 @@
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
-              
             </div>
             <br>
             <div class="rodape-info">
