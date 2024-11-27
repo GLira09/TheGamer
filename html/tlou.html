@@ -1,122 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Meta informações para a codificação de caracteres e responsividade -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Last Of Us II</title>
+
+    <!-- Inclusão de arquivos CSS externos -->
     <link rel="stylesheet" href="../css/tgcss.css">
     <link rel="stylesheet" href="../css/imgcss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" type="image/png" href="../imgs/thegamer-logo5.png">
 
     <style>
+        /* Importação da fonte Russo One do Google Fonts */
         @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
+        /* Estilos gerais do corpo da página */
         body {
-            background-color: #151c35; /* Fundo preto */
-            color: #fff; /* Texto branco */
-            font-family: 'Russo One', sans-serif;
+            background-color: #151c35; /* Fundo escuro */
+            color: #fff; /* Texto em branco */
+            font-family: 'Russo One', sans-serif; /* Fonte personalizada */
         }
 
+        /* Estilo para a seção de informações do produto */
         .produto-info {
             display: flex;
             align-items: center;
             justify-content: center; /* Centraliza horizontalmente */
             margin-top: 50px;
             color: #fff;
-            flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+            flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha, se necessário */
         }
 
+        /* Estilo para a imagem do produto */
         .imagem-sobre-menu {
-            width: 400px; /* Aumenta a largura da imagem */
-            max-width: 100%; /* Garante que não ultrapasse o limite da tela */
-            margin-right: 20px;
+            width: 400px; /* Tamanho fixo da imagem */
+            max-width: 100%; /* Evita que a imagem ultrapasse os limites da tela */
+            margin-right: 20px; /* Espaço à direita da imagem */
         }
 
+        /* Estilo para o texto ao lado da imagem */
         .texto-ao-lado-da-imagem {
-            max-width: 500px; /* Mantém a largura máxima do texto */
+            max-width: 500px; /* Limita a largura máxima do texto */
             text-align: center; /* Centraliza o texto */
         }
 
+        /* Estilo para o título do produto */
         .produto-info h2 {
             font-size: 36px;
             margin-bottom: 10px;
         }
 
+        /* Estilo para o parágrafo de descrição do produto */
         .produto-info p {
             font-size: 18px;
-            line-height: 1.5;
+            line-height: 1.5; /* Espaçamento entre as linhas */
         }
 
+        /* Estilo para o preço do produto */
         .preco {
             font-size: 24px;
             font-weight: bold;
-            color: #ff0000;
+            color: #ff0000; /* Cor vermelha para o preço */
             margin-top: 15px;
         }
 
+        /* Estilo para o botão de adicionar ao carrinho */
         .botao-adicionar {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 18px;
-            background-color: #444;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+            background-color: #444; /* Cor de fundo */
+            color: #fff; /* Cor do texto */
+            border: none; /* Remove a borda padrão */
+            cursor: pointer; /* Aponta o cursor para indicar ação */
+            transition: background-color 0.3s ease; /* Efeito de transição para a cor de fundo */
         }
 
+        /* Estilo para os links do rodapé */
         .rodape-links a {
             color: #fff;
             margin: 0 15px;
-            text-decoration: none;
+            text-decoration: none; /* Remove o sublinhado do link */
             font-size: 16px;
         }
 
+        /* Estilo para o container do produto */
         .produto-container {
             background-color: #000; /* Fundo preto */
             color: #fff; /* Texto branco */
-            width: 100%; /* Largura do quadrado ajustável */
+            width: 100%; /* Largura total */
             max-width: 1370px; /* Largura máxima para telas grandes */
             border: 3px solid #fff; /* Borda branca */
             padding: 40px; /* Espaço interno */
             border-radius: 8px; /* Bordas arredondadas */
-            text-align: center; /* Centralização do texto dentro do quadrado */
+            text-align: center; /* Centraliza o texto dentro do container */
             margin: 0 auto; /* Centraliza o container na tela */
         }
     </style>
 </head>
 <body>
 
-    <!--botão do carrinho-->
-    <a href="carrinho.php"><button class="carrinho"><img class="carrinho1" src="../imgs/carrinho1.png" alt="Carrinho de Compra" style="width: 40px; height: 40px;"></button></a>
+    <!-- Botão do carrinho -->
+    <a href="carrinho.php"><button class="carrinho">
+        <img class="carrinho1" src="../imgs/carrinho1.png" alt="Carrinho de Compra" style="width: 40px; height: 40px;">
+    </button></a>
 
-    <!--botão de perfil-->
-    <a href="perfil.html"><button class="botao-perfil"><img class="ft-perfil2" src="../imgs/ft-perfil2.png" alt="perfil" style="width: 40px; height: 40px;"></button></a>
+    <!-- Botão de perfil -->
+    <a href="perfil.html"><button class="botao-perfil">
+        <img class="ft-perfil2" src="../imgs/ft-perfil2.png" alt="perfil" style="width: 40px; height: 40px;">
+    </button></a>
 
-    <!--botão de ajuda-->
-    <a href="ajuda.html"><button class="ajuda"><img class="ft-perfil2" src="../imgs/ajuda.png" alt="ajuda"></button></a>
+    <!-- Botão de ajuda -->
+    <a href="ajuda.html"><button class="ajuda">
+        <img class="ft-perfil2" src="../imgs/ajuda.png" alt="ajuda">
+    </button></a>
 
-    <!--link de login-->
+    <!-- Link de login -->
     <nav class="login">
         <a href="login.html">Login</a>
     </nav>
         
-    <!--logo do site-->
+    <!-- Logo do site -->
     <br>
     <img class="tg-icon" src="../imgs/thegamer-logo.png" alt="TheGamer Icon">
     <br><br>
 
-    <!--botão "back"-->
+    <!-- Botão "back" -->
     <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
     <br><br><br>
 
+    <!-- Container do produto -->
     <div class="produto-container">
         <!-- Informações do Produto -->
         <div class="produto-info">
+            <!-- Imagem do Produto -->
             <img class="imagem-sobre-menu" src="../imgs/TLoU pt2.jpg" alt="Imagem do Produto">
             
             <div class="texto-ao-lado-da-imagem">
+                <!-- Título e descrição do produto -->
                 <h2>The Last of Us II (Remastered) </h2>
                 <p> The Last of Us Part II" segue a história de Ellie, agora mais velha e em busca de vingança em um mundo devastado por uma infecção zumbi. O jogo combina ação intensa, narrativa profunda e gráficos impressionantes para oferecer uma experiência envolvente e emocional. Com mecânicas aprimoradas de combate e exploração, o jogador enfrenta decisões difíceis enquanto explora temas de perda, sobrevivência e resiliência.</p>
                 <p class="preco">R$249,90</p>
@@ -125,13 +148,15 @@
         </div>
     </div>
 
+    <!-- Função JavaScript para adicionar ao carrinho -->
     <script>
         function adicionarAoCarrinho() {
             alert("Produto adicionado ao carrinho!");
-            // Código adicional para adicionar ao carrinho
+            // Código adicional para adicionar o produto ao carrinho pode ser implementado aqui
         }
     </script>
 
+    <!-- Rodapé com links -->
     <footer>
         <div class="rodape">
             <div class="rodape-links">
