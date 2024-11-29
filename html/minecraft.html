@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft</title>
+    <link rel="stylesheet" href="../css/tgcss.css">
+    <link rel="stylesheet" href="../css/imgcss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="../imgs/thegamer-logo5.png">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+        body {
+            background-color: #151c35; /* Fundo preto */
+            color: #fff; /* Texto branco */
+            font-family: 'Russo One', sans-serif;
+        }
+
+        .produto-info {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centraliza horizontalmente */
+            margin-top: 50px;
+            color: #fff;
+            flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha se necessário */
+        }
+
+        .imagem-sobre-menu {
+            width: 400px; /* Aumenta a largura da imagem */
+            max-width: 100%; /* Garante que não ultrapasse o limite da tela */
+            margin-right: 20px;
+        }
+
+        .texto-ao-lado-da-imagem {
+            max-width: 500px; /* Mantém a largura máxima do texto */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .produto-info h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .produto-info p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .preco {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+            margin-top: 15px;
+        }
+
+        .botao-adicionar {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .rodape-links a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .produto-container {
+            background-color: #000; /* Fundo preto */
+            color: #fff; /* Texto branco */
+            width: 100%; /* Largura do quadrado ajustável */
+            max-width: 1370px; /* Largura máxima para telas grandes */
+            border: 3px solid #fff; /* Borda branca */
+            padding: 40px; /* Espaço interno */
+            border-radius: 8px; /* Bordas arredondadas */
+            text-align: center; /* Centralização do texto dentro do quadrado */
+            margin: 0 auto; /* Centraliza o container na tela */
+        }
+    </style>
+</head>
+<body>
+
+    <!--botão do carrinho-->
+    <a href="carrinho.php"><button class="carrinho"><img class="carrinho1" src="../imgs/carrinho1.png" alt="Carrinho de Compra" style="width: 40px; height: 40px;"></button></a>
+
+    <!--botão de perfil-->
+    <a href="perfil.html"><button class="botao-perfil"><img class="ft-perfil2" src="../imgs/ft-perfil2.png" alt="perfil" style="width: 40px; height: 40px;"></button></a>
+
+    <!--botão de ajuda-->
+    <a href="ajuda.html"><button class="ajuda"><img class="ft-perfil2" src="../imgs/ajuda.png" alt="ajuda"></button></a>
+
+    <!--link de login-->
+    <nav class="login">
+        <a href="login.html">Login</a>
+    </nav>
+        
+    <!--logo do site-->
+    <br>
+    <img class="tg-icon" src="../imgs/thegamer-logo.png" alt="TheGamer Icon">
+    <br><br>
+
+    <!--botão "back"-->
+    <a href="index.html" onclick="history.back();" class="botao-voltar">&#8592; Voltar</a>
+    <br><br><br>
+
+    <div class="produto-container">
+        <!-- Informações do Produto -->
+        <div class="produto-info">
+            <img class="imagem-sobre-menu" src="../imgs/minecraft.png" alt="minecraft">
+            
+            <div class="texto-ao-lado-da-imagem">
+                <h2>Minecraft</h2>
+                <p>Minecraft é um jogo sandbox desenvolvido pela Mojang Studios e distribuído pela Microsoft, onde os jogadores podem explorar mundos gerados aleatoriamente e construir estruturas desde simples casas até grandiosos castelos. O jogo possui dois modos principais: criativo, com recursos ilimitados, e sobrevivência, onde os jogadores precisam reunir materiais, criar armas e armaduras e enfrentar inimigos.</p>
+                <p class="preco">R$99,00</p>
+                <button class="botao-adicionar" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function adicionarAoCarrinho() {
+            alert("Produto adicionado ao carrinho!");
+            // Código adicional para adicionar ao carrinho
+        }
+    </script>
+
+    <footer>
+        <div class="rodape">
+            <div class="rodape-links">
+                <a href="#">Sobre</a>
+                <a href="#">Ajuda</a>
+                <a href="#">Contato</a>
+                <a href="#">Termos de Serviço</a>
+            </div>
+            <br>
+            <div class="rodape-info">
+                <p>&copy; 2024 The Gamer | Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
